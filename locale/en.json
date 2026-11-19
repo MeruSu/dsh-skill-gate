@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Skill Gate",
+    "description": "Hide skills per agent preset: the model sees only the allowed catalog, and calls to hidden skills are refused. Installing it changes nothing until you write skill-gate.json."
+  }
+}

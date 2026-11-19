@@ -1,0 +1,62 @@
+{
+  "name": "dsh-skill-gate",
+  "version": "0.1.6",
+  "private": false,
+  "description": "Hide skills per agent preset: a filtered skill catalog for the model, and a refused `skill` call for what is hidden. Ships with no list — installing it changes nothing until you write skill-gate.json.",
+  "license": "MIT",
+  "author": {
+    "name": "MeruSu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeruSu/dsh-skill-gate.git"
+  },
+  "homepage": "https://github.com/MeruSu/dsh-skill-gate#readme",
+  "bugs": {
+    "url": "https://github.com/MeruSu/dsh-skill-gate/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "context",
+    "preset"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./lib/*.js": "./lib/*.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.png"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml",
+    "skill-gate.example.json",
+    "locale",
+    "icon.png",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node test/policy.test.mjs && node test/plugin.test.mjs"
+  }
+}

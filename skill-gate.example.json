@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "presets": {
+    "dev": {
+      "mode": "allow",
+      "names": [
+        "plugin-work",
+        "web-work",
+        "motion-work",
+        "dsh-plugin-dev",
+        "cordis-composition-reference",
+        "cangku-snapshots",
+        "long-session-fold"
+      ]
+    },
+    "minimal": { "mode": "allow", "names": ["cangku-snapshots"] },
+    "clerk": { "mode": "deny", "names": ["office*", "univer*"] },
+    "scholar": { "enabled": false, "mode": "deny", "names": [] },
+    "cordis": { "mode": "deny", "guard": false, "names": ["office*"] }
+  }
+}

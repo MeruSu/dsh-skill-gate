@@ -1,0 +1,7 @@
+# Bundle patch: one row for dsh-skill-gate.
+# The gate is host-only: it rewrites the skill catalog during `agent/pre-step` and
+# refuses hidden `skill` calls through `tools.guard`. It registers no tool, no
+# system-prompt section and no client half, because it exists to save context.
+- insert:
+    - id: skill-gate
+      name: 'dsh-skill-gate'
